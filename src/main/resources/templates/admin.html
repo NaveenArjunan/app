@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Cattle Feed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav class="main-nav admin-nav">
+        <div class="brand-logo">🐄 <span class="tamil">மாடு</span> Admin Panel</div>
+        <ul class="nav-links">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#products">Product Management</a></li>
+            <li><a href="#orders">Order Management</a></li>
+            <li><a href="#users">User & Role Management</a></li>
+            <li><a href="#content">Content Manager</a></li>
+            <li><a href="#reports">Reports & Analytics</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="dashboard" class="admin-section">
+            <h2>Dashboard</h2>
+            <div class="dashboard-widgets">
+                <div class="widget">Inventory: <span id="invCount">--</span></div>
+                <div class="widget">Sales: <span id="salesCount">--</span></div>
+                <div class="widget">Users: <span id="userCount">--</span></div>
+            </div>
+        </section>
+        <section id="products" class="admin-section">
+            <h2>Product Management</h2>
+            <button id="addProductBtn">+ Add Product</button>
+            <div id="adminProductGrid" class="product-grid"></div>
+        </section>
+        <section id="orders" class="admin-section">
+            <h2>Order Management</h2>
+            <div id="orderList"></div>
+        </section>
+        <section id="users" class="admin-section">
+            <h2>User & Role Management</h2>
+            <div id="userList"></div>
+        </section>
+        <section id="content" class="admin-section">
+            <h2>Content Manager</h2>
+            <div id="contentManager"></div>
+        </section>
+        <section id="reports" class="admin-section">
+            <h2>Reports & Analytics</h2>
+            <div id="reportsAnalytics"></div>
+        </section>
+    </main>
+    <div id="notification" class="notification hidden"></div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
+

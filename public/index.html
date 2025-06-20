@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhithya Cattle Feeds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="brand-logo">🐄 Adhithya Cattle Feeds</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#why">Why Choose Us</a></li>
+            <li><a href="#resources">Farmer Resources</a></li>
+            <li><a href="#contact">Contact & Support</a></li>
+            <li><a href="#login">Login/Signup</a></li>
+        </ul>
+        <div class="lang-toggle">
+            <button id="lang-en" class="active">EN</button>|
+            <button id="lang-ta">TA</button>
+        </div>
+    </nav>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1><span class="tamil">ஆதித்யா மாட்டுத்தீவனம்</span></h1>
+                <p class="mission"><b>Address:</b> 7/244, Kullalakundu Post, Pallapatti, Taluk, Nilakottai, Tamil Nadu 624201</p>
+                <p class="mission">Our mission is to deliver high-quality, nutritious cattle feed for every farm. <span class="tamil">உயர்தர, ஊட்டச்சத்து நிறைந்த பசு உணவை வழங்குவதே எங்கள் நோக்கம்.</span></p>
+            </div>
+            <div class="hero-image"></div>
+        </section>
+        <section id="products" class="products-section">
+            <h2>Our Products <span class="tamil">எங்கள் தயாரிப்புகள்</span></h2>
+            <div class="product-filters">
+                <!-- Filters: Category, Form, Protein, etc. -->
+                <select id="categoryFilter"><option>All Categories</option><option>Calf</option><option>Dairy</option><option>High-yield</option><option>Organic</option></select>
+                <select id="formFilter"><option>All Forms</option><option>Pellet</option><option>Mash</option></select>
+                <select id="proteinFilter"><option>All Protein Levels</option><option>Low</option><option>Medium</option><option>High</option></select>
+            </div>
+            <div id="productGrid" class="product-grid"></div>
+            <div id="productComparison" class="product-comparison"></div>
+        </section>
+        <section id="why" class="why-section">
+            <h2>Why Choose Us <span class="tamil">ஏன் எங்களை தேர்வு செய்ய வேண்டும்?</span></h2>
+            <div class="quality-highlights">
+                <div>✔️ Lab-tested Quality</div>
+                <div>✔️ Sustainable Sourcing</div>
+                <div>✔️ Certified Nutrition</div>
+            </div>
+            <div class="testimonials">
+                <blockquote>“Our milk yield improved after switching to this feed!” – <span class="tamil">ஒரு விவசாயி</span></blockquote>
+            </div>
+        </section>
+        <section id="resources" class="resources-section">
+            <h2>Farmer Resources <span class="tamil">விவசாயி வளங்கள்</span></h2>
+            <ul class="resource-list">
+                <li><a href="#">Feed Usage Guide (PDF)</a></li>
+                <li><a href="#">Animal Nutrition Video</a></li>
+                <li><a href="#">Feeding Schedules</a></li>
+            </ul>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Contact & Support <span class="tamil">தொடர்பு மற்றும் ஆதரவு</span></h2>
+            <form id="inquiryForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Your Inquiry" required></textarea>
+                <button type="submit">Send Inquiry</button>
+            </form>
+            <div class="contact-options">
+                <a href="https://wa.me/" target="_blank">WhatsApp</a> |
+                <a href="tel:+919999999999">Call Us</a>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps?q=ADHITHYA+CATTLE+FEEDS+(%E0%AE%86%E0%AE%A4%E0%AE%BF%E0%AE%A4%E0%AF%8D%E0%AE%9F%E0%AE%AF%E0%AE%BE+%E0%AE%AE%E0%AE%BE%E0%AE%9F%E0%AF%8D%E0%AE%9F%E0%AF%81%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AF%80%E0%AE%B5%E0%AE%A9%E0%AE%AE%E0%AF%8D),+7/244,+Kullalakundu+Post,+Pallapatti,+Taluk,+Nilakottai,+Tamil+Nadu+624201&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section id="login" class="login-section">
+            <h2>Farmer Portal Login/Signup <span class="tamil">உள்நுழைவு/பதிவு</span></h2>
+            <form id="loginForm">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <button type="button" id="signupBtn">Sign Up</button>
+            </form>
+        </section>
+    </main>
+    <div id="notification" class="notification hidden"></div>
+    <footer style="text-align:center; margin:2em 0 1em 0; color:#888; font-size:0.95em;">
+        © Adhithya Cattle Feeds 2025. All rights reserved.
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

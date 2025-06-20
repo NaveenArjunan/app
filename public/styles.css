@@ -1,0 +1,362 @@
+/*
+ * Copyright (c) 2025 Adhithya Cattle Feeds. All rights reserved.
+ */
+
+/* --- Enterprise-Grade UI Enhancements --- */
+:root {
+    --primary-green: #388e3c;
+    --accent-red: #d32f2f;
+    --background-white: #fff;
+    --background-green: #e8f5e9;
+    --background-red: #ffebee;
+    --background-light: #f7f9fa;
+    --text-dark: #222;
+    --text-light: #fff;
+    --shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 4px rgba(56,142,60,0.08);
+    --radius: 14px;
+    --transition: all 0.2s cubic-bezier(.4,0,.2,1);
+}
+
+body {
+    background: linear-gradient(120deg, var(--background-green) 0%, var(--background-light) 100%);
+    color: var(--text-dark);
+    font-family: 'Roboto', 'Noto Sans Tamil', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.main-nav, .admin-nav {
+    background: var(--primary-green);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.brand-logo {
+    color: var(--accent-red);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.08rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+.nav-links li a:hover, .nav-links li a:focus {
+    color: var(--accent-red);
+    background: var(--background-white);
+    box-shadow: 0 2px 8px rgba(56,142,60,0.08);
+}
+.lang-toggle button {
+    color: var(--primary-green);
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.lang-toggle button.active,
+.lang-toggle button:hover {
+    background: var(--background-green);
+    color: var(--accent-red);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2.5rem auto 0 auto;
+    padding: 0 1.5rem 2rem 1.5rem;
+}
+section {
+    margin-bottom: 2.5rem;
+    background: var(--background-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2.5rem 2rem;
+    transition: var(--transition);
+}
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(120deg, var(--background-green) 0%, var(--background-red) 100%);
+    border-bottom: 6px solid var(--accent-red);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 3rem 2.5rem 3rem 2.5rem;
+    margin-bottom: 2.5rem;
+}
+.hero-content {
+    max-width: 600px;
+}
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+.hero-section .mission {
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+}
+.hero-image {
+    min-width: 220px;
+    min-height: 220px;
+    background: url('img.webp') center/cover no-repeat, var(--background-green);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-left: 2.5rem;
+}
+.cta-btn {
+    background: linear-gradient(90deg, var(--primary-green) 60%, var(--accent-red) 100%);
+    color: #fff !important;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    font-size: 1.08em;
+    padding: 0.8em 2em;
+    box-shadow: 0 2px 12px rgba(56,142,60,0.08);
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 0.5px;
+    outline: none;
+    text-transform: none;
+    margin: 0.5em 0;
+    display: inline-block;
+}
+.cta-btn:hover, .cta-btn:focus {
+    background: linear-gradient(90deg, var(--accent-red) 60%, var(--primary-green) 100%);
+    color: #fff !important;
+    box-shadow: 0 4px 24px rgba(211,47,47,0.12);
+    transform: translateY(-2px) scale(1.03);
+    text-decoration: none;
+}
+
+.products-section, .resources-section, .login-section, .why-section, .contact-section {
+    background: var(--background-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 6px solid var(--accent-red);
+    padding: 2.5rem 2rem;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.product-card {
+    background: var(--background-light);
+    border-radius: var(--radius);
+    border: 1.5px solid var(--primary-green);
+    box-shadow: var(--shadow);
+    padding: 1.5rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: var(--transition);
+}
+.product-card:hover {
+    box-shadow: 0 8px 32px rgba(56,142,60,0.13);
+    border-color: var(--accent-red);
+    transform: translateY(-2px) scale(1.02);
+}
+.product-card .product-title {
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.product-card .product-type {
+    font-size: 1rem;
+    color: #6b8e23;
+    margin-bottom: 0.5rem;
+}
+.product-card button {
+    background: var(--accent-red);
+    color: var(--text-light);
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 1em;
+    padding: 0.7em 1.5em;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(211,47,47,0.08);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.product-card button:hover {
+    background: var(--primary-green);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(56,142,60,0.12);
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.7em 1em;
+    border: 1.5px solid #cfd8dc;
+    border-radius: var(--radius);
+    margin-bottom: 1.2rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: var(--transition);
+    background: #f9f9f9;
+}
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-green);
+    background: #fff;
+    outline: none;
+    box-shadow: 0 2px 8px rgba(56,142,60,0.08);
+}
+form button[type="submit"] {
+    background: linear-gradient(90deg, var(--primary-green) 60%, var(--accent-red) 100%);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    font-size: 1.08em;
+    padding: 0.8em 2em;
+    box-shadow: 0 2px 12px rgba(56,142,60,0.08);
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 0.5px;
+}
+form button[type="submit"]:hover, form button[type="submit"]:focus {
+    background: linear-gradient(90deg, var(--accent-red) 60%, var(--primary-green) 100%);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(211,47,47,0.12);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.quality-highlights div, .testimonials blockquote {
+    background: var(--background-light);
+    border-left: 5px solid var(--primary-green);
+    color: var(--primary-green);
+    box-shadow: 0 0 0 2px var(--accent-red);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.08rem;
+}
+.testimonials blockquote {
+    color: var(--accent-red);
+    border-left: 5px solid var(--accent-red);
+}
+.resource-list li a, .contact-options a, .tamil {
+    color: var(--accent-red);
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+}
+.resource-list li a:hover, .contact-options a:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+footer {
+    background: transparent;
+    color: #888;
+    font-size: 0.98em;
+    padding: 2em 0 1em 0;
+    text-align: center;
+    margin-top: 2em;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 1200px) {
+    main {
+        max-width: 98vw;
+        padding: 0 0.5rem 2rem 0.5rem;
+    }
+    .main-nav, .admin-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .hero-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    .hero-image {
+        margin-left: 0;
+        margin-top: 1.5rem;
+        width: 100%;
+        min-width: 180px;
+        height: 180px;
+    }
+    section {
+        padding: 1.5rem 1rem;
+    }
+}
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .dashboard-widgets {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .quality-highlights {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .resource-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .main-nav, .admin-nav {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem 0.5rem;
+    }
+    .brand-logo {
+        font-size: 1.1rem;
+    }
+    .hero-section h1 {
+        font-size: 1.1rem;
+    }
+    .product-card {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+    .modal-content {
+        min-width: 90vw;
+        padding: 1rem;
+    }
+    section {
+        margin: 0.5rem 0;
+        padding: 0.7rem 0.5rem;
+    }
+    .product-filters {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
